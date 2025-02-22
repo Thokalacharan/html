@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Output Methods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Output Methods</h1>
+    <button onclick="showAlert()">Show Alert</button>
+    <button onclick="writeToDocument()">Write to Document</button>
+    <button onclick="logToConsole()">Log to Console</button>
+    <button onclick="updateInnerHTML()">Update Inner HTML</button>
+    <div id="output"></div>
+    <script>
+        function showAlert() {
+            alert("This is an alert!");
+        }
+        function writeToDocument() {
+            document.write("This text is written to the document.");
+        }
+        function logToConsole() {
+            console.log("This message is logged to the console.");
+        }
+        function updateInnerHTML() {
+            document.getElementById("output").innerHTML = "This text is updated in the inner HTML.";
+        }
+    </script>
+</body>
+</html>
