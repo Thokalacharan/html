@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal and External JavaScript Example</title>
+    <!-- Link to External JavaScript -->
+    <script src="6a.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Embedding Example</h1>
+    
+    <p id="internal-demo">This text will change using internal JavaScript.</p>
+    <button onclick="changeTextInternal()">Change Text (Internal JS)</button>
+    <p id="external-demo">This text will change using external JavaScript.</p>
+    <button onclick="changeTextExternal()">Change Text (External JS)</button>
+</body>
+</html>
+
+
+this is the external file 
+
+function changeTextInternal() {
+    document.getElementById("internal-demo").innerHTML = "This text is updated using internal JavaScript!"
+}
+function changeTextExternal() {
+    document.getElementById("external-demo").innerHTML = "This text is updated using external JavaScript!"
+}
