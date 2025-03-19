@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image Example</title>
+    <style>
+        body {
+            margin: 0;
+            height: 200vh; /* Make the page scrollable */
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .background-container {
+            width: 100%;
+            height: 100%;
+            background-image: url('https://static.toiimg.com/thumb/msid-81189517,width-400,resizemode-4/81189517.jpg');
+            background-position: center 50%; /* Halfway down the page */
+            background-repeat: repeat-x; /* Repeat horizontally */
+            background-attachment: fixed; /* Image stays fixed during scroll */
+        }
+
+        .content {
+            position: relative;
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-container">
+        <div class="content">
+            <h1>Background Image Demo</h1>
+            <p>This page demonstrates a background image fixed halfway down, repeated horizontally, and remaining in place during scrolling.</p>
+        </div>
+    </div>
+</body>
+</html>
