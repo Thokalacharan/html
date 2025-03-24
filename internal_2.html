@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <title>Registration Form</title>
+    <style>
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form id="form">
+        Name: <input type="text" id="name"> <span id="nameError" class="error"></span><br><br>
+        Mobile: <input type="text" id="mobile"> <span id="mobileError" class="error"></span><br><br>
+        Email: <input type="text" id="email"> <span id="emailError" class="error"></span><br><br>
+        <button type="button" onclick="validate()">Submit</button>
+    </form>
+
+    <script>
+        function validate() {
+            const name = document.getElementById("name").value;
+            const mobile = document.getElementById("mobile").value;
+            const email = document.getElementById("email").value;
+
+            const nameValid = /^[A-Za-z][A-Za-z0-9]{5,}$/.test(name);
+            const mobileValid = /^[0-9]{10}$/.test(mobile);
+            const emailValid = /^[\w.-]+@[\w.-]+\.[a-zA-Z]{2,}$/.test(email);
+
+            document.getElementById("nameError").textContent = nameValid ? "" : "Invalid Name";
+            document.getElementById("mobileError").textContent = mobileValid ? "" : "Invalid Mobile";
+            document.getElementById("emailError").textContent = emailValid ? "" : "Invalid Email";
+
+            if (nameValid && mobileValid && emailValid) {
+                alert("Registration successful!");
+            }
+        }
+    </script>
+</body>
+</html>
